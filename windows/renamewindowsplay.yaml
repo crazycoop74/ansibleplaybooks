@@ -1,7 +1,7 @@
 ---
   hosts:[testweb]
   -win_updates
-     catagory_names
+     catagory_names:
        -SecurityUpdates
        -CriticalUpdates
      state: searched
