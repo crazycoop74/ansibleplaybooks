@@ -1,10 +1,8 @@
 ---
-- hosts:[testweb]
+- hosts: testweb
   tasks:
-   - name: Install Security Updates
-     win_updates
-       catagory_names:
-         - SecurityUpdates
-         - CriticalUpdates
-     state: searched
-     log_path: c:\ansibletest
+    - name: Install Security Updates
+      win_updates:
+       catagory_names: SecurityUpdates
+       state: searched
+      log_path: c:\ansibletest
