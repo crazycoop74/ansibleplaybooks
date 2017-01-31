@@ -5,4 +5,4 @@
       win_updates:
        catagory_names: SecurityUpdates
        state: searched
-      log_path: c:\ansibletest
+       log_path: c:\ansibletest
