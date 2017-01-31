@@ -4,7 +4,5 @@
     - name: Install Security Updates
       win_updates:
        catagory_names: [SecurityUpdates, CriticalUpdates]
-         - SecurityUpdates
-         - CriticalUpdates
        state: searched
        log_path: c:\ansibletest
