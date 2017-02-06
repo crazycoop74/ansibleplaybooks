@@ -1,6 +1,7 @@
 ---
 - hosts: test
 - name: Disable from F5
+  tasks:
   bigip_node:
       server: "{{ big_IP_host }}"
       user: "{{ username }}"
