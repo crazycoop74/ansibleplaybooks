@@ -6,6 +6,6 @@
       user: "{{ username }}"
       password: "{{ guest_password }}"
       state: present
-     session_state: disabled
-     monitor_state: disabled
-     partition: common
+      session_state: disabled
+      monitor_state: disabled
+      partition: common
