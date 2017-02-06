@@ -2,7 +2,7 @@
 - hosts: test
   task:
      #name: Disable from F5
-    -  bigip_node:
+      bigip_node:
           server: "{{ big_IP_host }}"
           user: "{{ username }}"
           password: "{{ guest_password }}"
