@@ -22,6 +22,6 @@
         group="{{ ec2_security_group }}"
         type="{{ ec2_image }}"
         region="{{ ec2_region }}"
-        
+        image="{{ ec2_image }}"
         count="{{ ec2_instance_count }}"
       register: ec2
