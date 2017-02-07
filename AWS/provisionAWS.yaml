@@ -23,7 +23,8 @@
      group="{{ ec2_security_group }}"
      type="{{ ec2_image }}"
      region="{{ ec2_region }}"
-     instance_tags="{'Name:'''{{ ec2_tag }}'}"
+     instance_tags:
+         Name="{{ ec2_tag }}"
      count="{{ ec2_instance_count }}"
      wait=true
     register: ec2
