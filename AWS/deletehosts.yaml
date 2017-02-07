@@ -7,6 +7,6 @@
     ec2_instance_ids:
   tasks:
     - name: Terminate instances that were previously launched
-      ec2:
+      ec2: >
         state: 'absent'
-        instance_ids: '{{ ec2.instance_ids }}'
+        instance_ids: '{{ ec2_instance_ids }}'
