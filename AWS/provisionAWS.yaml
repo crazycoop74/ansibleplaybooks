@@ -17,14 +17,14 @@
   tasks:
   - name: Launch AWS instances
     ec2: >
-     access_key="{{ ec2_access_key }}"
-     secret_key="{{ ec2_secret_key }}"
-     keypair="{{ ec2_keypair }}"
-     group="{{ ec2_security_group }}"
-     type="{{ ec2_image }}"
-     region="{{ ec2_region }}"
-     instance_tags:
-         Name="{{ ec2_tag }}"
-     count="{{ ec2_instance_count }}"
-     wait=true
+      access_key="{{ ec2_access_key }}"
+      secret_key="{{ ec2_secret_key }}"
+      keypair="{{ ec2_keypair }}"
+      group="{{ ec2_security_group }}"
+      type="{{ ec2_image }}"
+      region="{{ ec2_region }}"
+      instance_tags:
+          Name="{{ ec2_tag }}"
+      count="{{ ec2_instance_count }}"
+      wait=true
     register: ec2
