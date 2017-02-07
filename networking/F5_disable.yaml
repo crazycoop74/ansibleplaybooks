@@ -7,14 +7,18 @@
     big_IP_host:
     username:
     guest_password:
+    state: present
+    session_state: disabled
+    monitor_state: disabled
+    partition: common
 
   tasks:
   - name: Disable from F5
-    bigip_node:
-      server: "{{ big_IP_host }}"
-      user: "{{ username }}"
-      password: "{{ guest_password }}"
-      state: present
-      session_state: disabled
-      monitor_state: disabled
-      partition: common
+    bigip_node: >
+      server="{{ big_IP_host }}"
+      user="{{ username }}"
+      password="{{ guest_password }}"
+      state="{{ state }}"
+      session_state="{{ session_state }}"
+      monitor_state="{{ monitor_state }}"
+      partition="{{ partition }}"
