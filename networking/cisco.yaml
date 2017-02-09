@@ -1,0 +1,10 @@
+---
+- name: Gather hosts
+  hosts: file
+  gather_facts: False
+  tasks:
+    - Run ios commands
+  ios_command:
+      commands:
+        - show version
+        - show inventory
