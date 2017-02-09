@@ -12,13 +12,13 @@
     partition: common
 
   tasks:
-  - name: Disable from F5
-    bigip_node: >
-      server="{{ big_IP_host }}"
-      user="{{ username }}"
-      password="{{ guest_password }}"
-      state="{{ state }}"
-      session_state="{{ session_state }}"
-      monitor_state="{{ monitor_state }}"
-      partition="{{ partition }}"
-      name: 10.80.5.100
+    - name: Disable from F5
+      bigip_node: >
+        server="{{ big_IP_host }}"
+        user="{{ username }}"
+        password="{{ guest_password }}"
+        state="{{ state }}"
+        session_state="{{ session_state }}"
+        monitor_state="{{ monitor_state }}"
+        partition="{{ partition }}"
+        name: 10.80.5.100
