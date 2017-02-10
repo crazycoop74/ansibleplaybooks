@@ -1,7 +1,7 @@
 ---
-- hosts: localhost
+- name: Setup F5
+  hosts: localhost
   gather_facts: False
-
   vars:
     big_IP_host:
     username:
@@ -10,15 +10,13 @@
     session_state: disabled
     monitor_state: disabled
     partition: common
-
   tasks:
     - name: Disable from F5
-      bigip_node: >
-        server="{{ big_IP_host }}"
-        user="{{ username }}"
-        password="{{ guest_password }}"
-        state="{{ state }}"
-        session_state="{{ session_state }}"
-        monitor_state="{{ monitor_state }}"
-        partition="{{ partition }}"
-        name: 10.80.5.100
+      bigip_node:
+          server="{{ big_IP_host }}"
+          user="{{ username }}"
+          password="{{ guest_password }}"
+          state="{{ state }}"
+          session_state="{{ session_state }}"
+          monitor_state="{{ monitor_state }}"
+          partition="{{ partition }}"
