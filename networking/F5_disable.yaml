@@ -13,7 +13,7 @@
   tasks:
     - name: Disable from F5
       bigip_node:
-        validate_cert: False
+        validate_certs: False
         name: 10.80.5.100
           server="{{ big_IP_host }}"
           user="{{ username }}"
