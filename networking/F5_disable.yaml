@@ -3,9 +3,9 @@
   hosts: localhost
   gather_facts: False
   vars:
-    big_IP_host:
-    username:
-    guest_password:
+    big_IP_host: big_IP_host
+    username: username
+    guest_password: guest_password
     state: present
     session_state: disabled
     monitor_state: disabled
