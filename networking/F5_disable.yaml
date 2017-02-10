@@ -15,10 +15,10 @@
       bigip_node:
         validate_certs: False
         name: 10.80.5.100
-          server="{{ big_IP_host }}"
-          user="{{ username }}"
-          password="{{ guest_password }}"
-          state="{{ state }}"
-          session_state="{{ session_state }}"
-          monitor_state="{{ monitor_state }}"
-          partition="{{ partition }}"
+        server: '{{ big_IP_host }}'
+        user: "{{ username }}"
+        password: "{{ guest_password }}"
+        state: "{{ state }}"
+        session_state: "{{ session_state }}"
+        monitor_state: "{{ monitor_state }}"
+        partition: "{{ partition }}"

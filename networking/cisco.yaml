@@ -3,7 +3,7 @@
   hosts: file
   gather_facts: False
   tasks:
-    - Run ios commands
+    - name: Run ios commands
   ios_command:
       commands:
         - show version
