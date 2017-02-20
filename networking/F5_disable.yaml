@@ -25,3 +25,6 @@
         session_state: "{{ session_state }}"
         monitor_state: "{{ monitor_state }}"
         partition: "{{ partition }}"
+      with_items:
+        - coops_Test
+        
