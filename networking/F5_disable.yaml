@@ -11,7 +11,7 @@
     state: present
     session_state: disabled
     monitor_state: disabled
-    partition: common
+    partition: Common
   tasks:
     - name: Disable from F5
       bigip_node:
@@ -27,4 +27,3 @@
         partition: "{{ partition }}"
       with_items:
         - coops_Test
-        
