@@ -1,9 +1,10 @@
 ---
 - name: Setup F5
-  hosts: localhost
+  hosts: Vlab
+  connection: local
+
   gather_facts: False
   vars:
-    big_IP_host: big_IP_host
     username: username
     guest_password: guest_password
     state: present
@@ -15,7 +16,7 @@
       bigip_node:
         validate_certs: False
         name: 10.80.5.100
-        server: '{{ big_IP_host }}'
+        server: '{{ inventory_hostname }}'
         user: "{{ username }}"
         password: "{{ guest_password }}"
         state: "{{ state }}"
