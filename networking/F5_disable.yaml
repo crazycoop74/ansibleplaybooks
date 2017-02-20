@@ -17,7 +17,7 @@
       bigip_node:
         validate_certs: False
         host: 10.80.5.100
-        name: coops_Test 
+        name: "{{ item }}"
         server: '{{ inventory_hostname }}'
         user: "{{ username }}"
         password: "{{ guest_password }}"
