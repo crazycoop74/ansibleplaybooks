@@ -5,6 +5,7 @@
 
   gather_facts: False
   vars:
+
     username: username
     guest_password: guest_password
     state: present
@@ -15,7 +16,7 @@
     - name: Disable from F5
       bigip_node:
         validate_certs: False
-        name: 10.80.5.100
+        host: 10.80.5.100
         server: '{{ inventory_hostname }}'
         user: "{{ username }}"
         password: "{{ guest_password }}"
