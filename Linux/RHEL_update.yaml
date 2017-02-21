@@ -1,1 +1,11 @@
 ---
+- name: Identify hosts
+  hosts: rheltest
+  gather_facts: true
+
+  tasks:
+    - name: Install Security Updates
+      yum:
+        name: yum-plugin-security
+        state: latest
+        
