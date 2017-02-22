@@ -2,7 +2,7 @@
 - name: Identify hosts
   hosts: rheltest
   user: cloud-user
-  sudo: yes
+  become: yes
   gather_facts: true
 
   tasks:
