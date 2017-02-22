@@ -8,5 +8,5 @@
   tasks:
     - name: Install Security Updates
       yum:
-        name: yum-plugin-security
+        name: security
         state: latest
