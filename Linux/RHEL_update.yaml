@@ -1,6 +1,6 @@
 ---
 - name: Identify hosts
-  hosts: rheltest
+  hosts: all
   user: cloud-user
   become: yes
   gather_facts: true
