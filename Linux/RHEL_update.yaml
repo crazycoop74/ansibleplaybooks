@@ -7,5 +7,4 @@
 
   tasks:
     - name: Install Security Updates
-      command: /usr/bin/yum --security
-    
+      command: /usr/bin/yum -y update --security
