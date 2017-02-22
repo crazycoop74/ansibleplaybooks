@@ -1,6 +1,8 @@
 ---
 - name: Identify hosts
   hosts: rheltest
+  user: cloud-user
+  sudo: yes
   gather_facts: true
 
   tasks:
@@ -8,4 +10,3 @@
       yum:
         name: yum-plugin-security
         state: latest
-        
