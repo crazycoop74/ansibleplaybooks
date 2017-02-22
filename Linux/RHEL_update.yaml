@@ -7,6 +7,6 @@
 
   tasks:
     - name: Install Security Updates
-      yum:
-        name: security
-        state: latest
+      command: /usr/bin/yum update -y {{item}}
+      with_items:
+        - security
