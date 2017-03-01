@@ -1,1 +1,10 @@
 ---
+- name: Identify hosts
+  hosts: all
+  user: cloud-user
+  become: yes
+  gather_facts: true
+
+  tasks:
+    - name: Install Security Updates
+      command: /usr/bin/yum -y update --security

@@ -1,24 +1,29 @@
 ---
-- hosts: localhost
-  gather_facts: False
+- name: Setup F5
+  hosts: Vlab
+  connection: local
 
+  gather_facts: False
   vars:
-    big_IP_host:
-    username:
-    guest_password:
+
+    username: username
+    guest_password: guest_password
     state: present
     session_state: disabled
     monitor_state: disabled
-    partition: common
-
+    partition: Common
   tasks:
     - name: Disable from F5
-      bigip_node: >
-        server="{{ big_IP_host }}"
-        user="{{ username }}"
-        password="{{ guest_password }}"
-        state="{{ state }}"
-        session_state="{{ session_state }}"
-        monitor_state="{{ monitor_state }}"
-        partition="{{ partition }}"
-        name: 10.80.5.100
+      bigip_node:
+        validate_certs: False
+        host: 10.80.5.100
+        name: "{{ item }}"
+        server: '{{ inventory_hostname }}'
+        user: "{{ username }}"
+        password: "{{ guest_password }}"
+        state: "{{ state }}"
+        session_state: "{{ session_state }}"
+        monitor_state: "{{ monitor_state }}"
+        partition: "{{ partition }}"
+      with_items:
+        - coops_Test
